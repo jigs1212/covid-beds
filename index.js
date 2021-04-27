@@ -7,19 +7,16 @@ $( document ).ready(function() {
 
 
     $.get( url, function( data ) {
-        console.log(data)
         var values = data.values;
         var head;
         values.forEach((element, index) => {
           if ( index == 0 ) {
             head=element;
-            console.log(head)
           } else {
             let d = {};
             element.forEach((ele,ind) => {
               d[head[ind]] = ele
             })
-            console.log(d)
             details.push(d);
           }
         });
@@ -35,6 +32,7 @@ $( document ).ready(function() {
         // });
         // console.log(rows);
         // $("#tablecont").html(rows);
+        $.fn.dataTable.ext.errMode = 'none';
         $('#example').DataTable( {
           data: details,
           columns: [
