@@ -2,7 +2,8 @@ $( document ).ready(function() {
     console.log( "ready!" );
 
     var details = [];
-    var url = `https://covid-19-hospital-data.el.r.appspot.com/area/Delhi`;
+    // var url = `https://covid-19-hospital-data.el.r.appspot.com/area/Delhi`;
+    var url = `https://covidmapindia.org/area/Delhi`;
   
 
 
